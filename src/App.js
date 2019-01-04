@@ -18,7 +18,7 @@ const Card = (props) => {
 const CardList = (props) => {
 	return (
   	<div>
-  	  {props.cards.map(card => <Card key ={card.id} {...card}/>)}
+  	  {props.cards.map(card => <Card key ={Math.random()} {...card}/>)}
   	</div>
   );
 }
@@ -38,7 +38,7 @@ class Form extends Component{
   	<form onSubmit={this.handleSubmit}>
       <div className="input-group mb-2">
     	  <input className="form-control" type="text" value ={this.state.userName} onChange={(event) => this.setState({userName: event.target.value})} placeholder="Nombre Usuario GitHub" required />
-        <div class="input-group-append">
+        <div className="input-group-append">
           <button className="btn btn-primary" type="submit"> Añadir Usuario</button>
         </div>
       </div>
