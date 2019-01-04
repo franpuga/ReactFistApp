@@ -36,8 +36,12 @@ class Form extends Component{
 	render(){
   return(
   	<form className="container" onSubmit={this.handleSubmit}>
-    	<input className="form-control" type="text" value ={this.state.userName} onChange={(event) => this.setState({userName: event.target.value})} placeholder="Nombre Usuario GitHub" required />
-      <button className="btn btn-primary" type="submit"> Añadir Usuario</button>
+      <div className="input-group mb-2">
+    	  <input className="form-control" type="text" value ={this.state.userName} onChange={(event) => this.setState({userName: event.target.value})} placeholder="Nombre Usuario GitHub" required />
+        <div class="input-group-append">
+          <button className="btn btn-primary" type="submit"> Añadir Usuario</button>
+        </div>
+      </div>
     </form>
   );
   }
