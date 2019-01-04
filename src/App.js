@@ -35,7 +35,7 @@ class Form extends Component{
   };
 	render(){
   return(
-  	<form className="container" onSubmit={this.handleSubmit}>
+  	<form onSubmit={this.handleSubmit}>
       <div className="input-group mb-2">
     	  <input className="form-control" type="text" value ={this.state.userName} onChange={(event) => this.setState({userName: event.target.value})} placeholder="Nombre Usuario GitHub" required />
         <div class="input-group-append">
@@ -60,7 +60,7 @@ class App extends React.Component{
   
 	render(){
   	return(
-    	<div>
+    	<div className="container">
       	<Form onSubmit={this.addNewCard}/>
         <CardList cards={this.state.cards}/>
       </div>
